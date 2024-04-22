@@ -10,7 +10,7 @@ typedef VD::Face_handle Face_handle;
 typedef VD::Ccb_halfedge_circulator Ccb_halfedge_circulator;
 
 class Pedestrian {
-    // Các phương thức khác
+    //Các phương thức khác
 
 public:
     std::vector<Point_2> getIntermediatePoints() const {
