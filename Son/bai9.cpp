@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <vector>
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
-#include <CGAL/Voronoi_diagram_2.h>
+#include <CGAL/Voronoi_diagram_2.h> 
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Point_2 Point_2;
