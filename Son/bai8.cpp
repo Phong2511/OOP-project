@@ -79,14 +79,3 @@ private:
     }
 };
 
-int main() {
-    LeavingDistribution leavingDistribution("data.json");
-
-    
-    char locationKey = 'W';
-    int time = 12;
-    int total = leavingDistribution.getTotal(locationKey, time);
-    std::cout << "Total number of people leaving from location " << locationKey << " at time " << time << ": " << total << std::endl;
-
-    return 0;
-}
