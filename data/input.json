@@ -150,112 +150,219 @@
       }
     }
   },
-"personalityDistribution" : {
-	"description" : "distribution of personality in a pedestrian",
-	"distribution": {
-		"open" : {
-			"description" : "open personalities are more optimistic when facing setbacks and will be more active in solving difficulties",
-			"positiveEmotionThreshold" : "0.3",
-			"negativeEmotionThreshold" : "-0.7",
-			"percentage" : 50,
-			"lambda" : 1
-    },  
-		"neurotic" : {
-			"description" : "neurotic personalities tend to behave negatively in the face of the same frustration.",
-			"positiveEmotionThreshold" : "0.6",
-			"negativeEmotionThreshold" : "-0.4",
-			"percentage" : 50,
-			"lambda" : 4
+  "personalityDistribution" : {
+    "description" : "distribution of personality in a pedestrian",
+    "distribution": {
+      "open" : {
+        "description" : "open personalities are more optimistic when facing setbacks and will be more active in solving difficulties",
+        "positiveEmotionThreshold" : "0.3",
+        "negativeEmotionThreshold" : "-0.7",
+        "percentage" : 50,
+        "lambda" : 1
+      },  
+      "neurotic" : {
+        "description" : "neurotic personalities tend to behave negatively in the face of the same frustration.",
+        "positiveEmotionThreshold" : "0.6",
+        "negativeEmotionThreshold" : "-0.4",
+        "percentage" : 50,
+        "lambda" : 4
+      }
+    },
+    "heuristic" : {
+      "positiveEmotionThreshold" : "0.8",
+      "0negativeEmotionThreshold" : "-0.8"
     }
   },
-  "heuristic" : {
-	  "positiveEmotionThreshold" : "0.8",
-		"0negativeEmotionThreshold" : "-0.8"
-  }
-},
-"insideTimeDistribution" : {
-	"description" : "distribution of inside time for a pedestrian",
-	"distribution": {
-		"uniform" : {
-			"description" : "uniform distribution",
-			"value" : 10
+  "insideTimeDistribution" : {
+    "description" : "distribution of inside time for a pedestrian",
+    "distribution": {
+      "uniform" : {
+        "description" : "uniform distribution",
+        "value" : 10
+      }
     }
-  }
-},
-"eventDistribution" : {
-	"description" : "distribution of events for all pedestrians",
-	"distribution": {
-		"normal" : {
-			"description" : "normal distribution",
-			"samples" : 43,
-			"numberOfValues" : 200,
-			"minValue" : -1,
-			"maxValue" : 1,
-			"numberOfFields" : 6
+  },
+  "eventDistribution" : {
+    "description" : "distribution of events for all pedestrians",
+    "distribution": {
+      "normal" : {
+        "description" : "normal distribution",
+        "samples" : 43,
+        "numberOfValues" : 200,
+        "minValue" : -1,
+        "maxValue" : 1,
+        "numberOfFields" : 6
+      }
     }
-  }
-},
-"imeBetweenEventsDistribution" : {
-	"description" : "distribution of time between happended events for a pedestrian",
-	"distribution": {
-		"normal" : {
-			"description" : "normal distribution",
-			"samples" : 20,
-			"numberOfValues" : 200,
-			"minValue" : 100,
-			"maxValue" : 3600
+  },
+  "imeBetweenEventsDistribution" : {
+    "description" : "distribution of time between happended events for a pedestrian",
+    "distribution": {
+      "normal" : {
+        "description" : "normal distribution",
+        "samples" : 20,
+        "numberOfValues" : 200,
+        "minValue" : 100,
+        "maxValue" : 3600
+      }
     }
-  }
-},
+  },
 
-"impactOfAGV" : {
-	"description" : "distribution of AGV’s impact for all pedestrians",
-	"scope" : 3,
-	"distribution": {
-		"children" : {
-			"description" : "normal distribution",
-			"numberOfValues" : 100,
-			"minValue" : 0.01,
-			"maxValue" : 0.99,
-			"numberOfFields" : 6
-    },
-		"ALKW" : {
-			"description" : "normal distribution",
-			"numberOfValues" : 100,
-			"minValue" : -0.29,
-			"maxValue" : 0.99,
-			"numberOfFields" : 6
-    },
-    "BFGMEN" : {
-			"description" : "normal distribution",
-			"numberOfValues" : 100,
-			"minValue" : -0.99,
-			"maxValue" : 0.29,
-			"numberOfFields" : 6
-    },
-		"Elder" : {
-			"description" : "normal distribution",
-			"numberOfValues" : 100,
-			"minValue" : -0.99,
-			"maxValue" : 0.29,
-			"numberOfFields" : 6
-    },
-    "Blinder" : {
-			"description" : "normal distribution",
-			"numberOfValues" : 100,
-			"minValue" : -0.99,
-			"maxValue" : 0.29,
-			"numberOfFields" : 6
-    },
-		"Other" : {
-			"description" : "normal distribution",
-			"numberOfValues" : 100,
-			"minValue" : -0.99,
-			"maxValue" : 0.99,
-			"numberOfFields" : 6
+  "impactOfAGV" : {
+    "description" : "distribution of AGV’s impact for all pedestrians",
+    "scope" : 3,
+    "distribution": {
+      "children" : {
+        "description" : "normal distribution",
+        "numberOfValues" : 100,
+        "minValue" : 0.01,
+        "maxValue" : 0.99,
+        "numberOfFields" : 6
+      },
+      "ALKW" : {
+        "description" : "normal distribution",
+        "numberOfValues" : 100,
+        "minValue" : -0.29,
+        "maxValue" : 0.99,
+        "numberOfFields" : 6
+      },
+      "BFGMEN" : {
+        "description" : "normal distribution",
+        "numberOfValues" : 100,
+        "minValue" : -0.99,
+        "maxValue" : 0.29,
+        "numberOfFields" : 6
+      },
+      "Elder" : {
+        "description" : "normal distribution",
+        "numberOfValues" : 100,
+        "minValue" : -0.99,
+        "maxValue" : 0.29,
+        "numberOfFields" : 6
+      },
+      "Blinder" : {
+        "description" : "normal distribution",
+        "numberOfValues" : 100,
+        "minValue" : -0.99,
+        "maxValue" : 0.29,
+        "numberOfFields" : 6
+      },
+      "Other" : {
+        "description" : "normal distribution",
+        "numberOfValues" : 100,
+        "minValue" : -0.99,
+        "maxValue" : 0.99,
+        "numberOfFields" : 6
+      }
+    }
+  },
+  //cho bai 8
+  "leavingDistribution": {
+    "description": "distribution of start walking",
+    "distribution": {
+      "A": {
+        "description": "at Administration Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "0",
+          "end": "1000",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      },
+      "B": {
+        "description": "at Brain Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "13",
+          "end": "700",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      },
+      "E": {
+        "description": "at E Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "16",
+          "end": "700",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      },
+      "F": {
+        "description": "at F Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "15",
+          "end": "400",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      },
+      "G": {
+        "description": "at G Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "13",
+          "end": "700",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      },
+      "L": {
+        "description": "at L Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "13",
+          "end": "700",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      },
+      "M": {
+        "description": "at M Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "13",
+          "end": "700",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      },
+      "N": {
+        "description": "at N Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "13",
+          "end": "700",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      },
+      "K": {
+        "description": "at K Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "13",
+          "end": "700",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      },
+      "W": {
+        "description": "at G Center",
+        "normal": {
+          "description": "normal distribution",
+          "start": "13",
+          "end": "700",
+          "timeStep": "2",
+          "std_dev": 1
+        }
+      }
     }
   }
-}
+  
 }
 
 

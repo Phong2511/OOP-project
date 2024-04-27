@@ -54,7 +54,7 @@ private:
     }
 
     void calculateTotals() { //Tính tổng người ra ở 1 khoa tại 1 thời điểm
-        for (const auto& location : data["leavingDistribution"].items()) {
+        for (const auto& location : data["leavingDistribution"]["distribution"].items()) {
             char locationKey = location.key();
             std::map<int, int> locationTotals;
             for (int time = 0; time <= 1000; ++time) { // Cho time chạy từ 0 đến 1000
@@ -82,4 +82,4 @@ private:
 <<<<<<< HEAD
 
 =======
->>>>>>> f8ea3367f51717ff707488969a43d191d9178213
+
